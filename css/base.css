@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Kumbh Sans', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--Soft-violet)), to(var(--Soft-blue))) no-repeat;
+  background: linear-gradient(var(--Soft-violet), var(--Soft-blue)) no-repeat;
+}
+
+h1 {
+  font-weight: var(--heavyWeight);
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+p {
+  font-weight: var(--lightWeight);
+  font-family: 'Kumbh Sans', sans-serif;
+}
+/*# sourceMappingURL=base.css.map */

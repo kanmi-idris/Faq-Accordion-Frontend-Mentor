@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(var(--Soft-violet), var(--Soft-blue) ) no-repeat;
+}
+
+h1 {
+    font-weight: var(--heavyWeight);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+p {
+    font-weight: var(--lightWeight);
+    font-family: 'Kumbh Sans', sans-serif; 
+}
+
+

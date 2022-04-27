@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import './base.scss';
+@import './media.scss';
+
+
+:root {
+
+//#### Text
+--Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+--Soft-red: hsl(14, 88%, 65%);
+
+//Background gradient:
+--White:white;
+--Soft-violet: hsl(273, 75%, 66%);
+--Soft-blue: hsl(240, 73%, 65%);
+
+//#### Text
+
+--Very-dark-grayish-blue: hsl(237, 12%, 33%);
+--Dark-grayish-blue: hsl(240, 6%, 50%);
+
+//#### Dividers
+
+--Light-grayish-blue: hsl(240, 5%, 91%);
+
+//## Typography
+--Font-size: 12px;
+
+//### Font
+--lightWeight: 400;
+--heavyWeight: 700; 
+
+}
+
+main {
+    background-color: var(--White);
+    margin: 30% auto;
+    width: 17rem;
+    border-radius: 1.2rem;
+    position: relative;
+    font-family: 'Kumbh Sans', sans-serif;
+
+
+    .mobile-img {
+        width: 60%;
+        position: absolute;
+        top: -70px;
+        left: 60px;
+        z-index: 2;
+        
+    }
+
+    .img-shadow {
+        position: relative;
+        width: 60%;
+        bottom: -7px;
+        left: 22%;
+        
+    }
+
+    .header-text {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+        text-align: center;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-weight: var(--heavyWeight);
+        color: var(--Very-dark-desaturated-blue);
+    }
+    
+
+}
+
+.desktop-img {
+    display: none;
+}
+
+.box {
+    display: none;
+}
+
+.pattern {
+    display: none;
+}
+
+.faqs-bx {
+    padding: 2.5rem 1.5rem;
+    padding-top: 0;
+    font-weight: var(--lightWeight);
+    font-size: var(--Font-size);
+}
+
+.faqs-ans {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+
+}
+
+.faqs {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .3s;
+
+    p {
+        color: var(--Very-dark-desaturated-blue);
+    }
+
+    img {
+        align-self: center;
+    }
+
+}
+
+.active .faqs p {
+    font-weight: var(--heavyWeight);
+    color: var(--Soft-red);
+}
+
+.active .faqs img {
+    transform: rotate(180deg);
+}
+
+.active .ans {
+    display: block;
+    margin-top: .5rem;
+    width: 95%;
+    line-height: 1.5rem;
+    color: var(--Dark-grayish-blue);
+    transition: all .3s ease-in;
+}
+
+.faqs p:hover {
+    color: var(--Soft-red);
+}
+
+.ans {
+    display: none;
+    color: var(--Very-dark-grayish-blue);
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen  and (min-width:1000px){
+    body {
+        display: flex;
+        align-content:center ;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    main {
+        display: flex;
+        justify-content: flex-end;
+        margin: 10rem auto;
+        width: 50rem;
+        flex-direction: row;
+        position: relative;
+        // overflow: hidden;
+
+
+        .desktop-img {
+            display: block;
+            position: absolute;
+            width: 230%;
+            height: 80%;
+            top: 3rem;
+            left: -13rem;
+            z-index: 2;
+            object-fit: cover;
+            object-position: -60px -2.3px;
+
+        
+        }
+
+        .pattern {
+            display: block;
+            position: absolute;
+            width: 400%;
+            height: 190%;
+            top: 0rem;
+            left: -13rem;
+            object-fit: cover;
+            object-position: -417px -235px;
+        
+        }
+
+        
+    }
+
+    .box {
+        position: inherit;
+        display: block;
+        width: 120%;
+        top: 9rem;
+        left: -20rem;
+        z-index: 3;
+        }
+
+    .accordion-bx{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        .header-text {
+            text-align: start;
+            margin-left: 1.5rem;
+        }
+
+        
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .img-shadow {
+        display: none;
+    }
+
+    .main-img {
+        position: relative;
+    }
+
+
+    
+
+
+}

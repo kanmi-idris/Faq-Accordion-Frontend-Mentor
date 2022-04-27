@@ -1,0 +1,314 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--Soft-violet)), to(var(--Soft-blue))) no-repeat;
+  background: linear-gradient(var(--Soft-violet), var(--Soft-blue)) no-repeat;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 10rem auto;
+    width: 50rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+  }
+  main .desktop-img {
+    display: block;
+    position: absolute;
+    width: 230%;
+    height: 80%;
+    top: 3rem;
+    left: -13rem;
+    z-index: 2;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -60px -2.3px;
+       object-position: -60px -2.3px;
+  }
+  main .pattern {
+    display: block;
+    position: absolute;
+    width: 400%;
+    height: 190%;
+    top: 0rem;
+    left: -13rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -417px -235px;
+       object-position: -417px -235px;
+  }
+  .box {
+    position: inherit;
+    display: block;
+    width: 120%;
+    top: 9rem;
+    left: -20rem;
+    z-index: 3;
+  }
+  .accordion-bx {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+  }
+  .accordion-bx .header-text {
+    text-align: start;
+    margin-left: 1.5rem;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .img-shadow {
+    display: none;
+  }
+  .main-img {
+    position: relative;
+  }
+}
+
+:root {
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --White:white;
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+  --Font-size: 12px;
+  --lightWeight: 400;
+  --heavyWeight: 700;
+}
+
+main {
+  background-color: var(--White);
+  margin: 30% auto;
+  width: 17rem;
+  border-radius: 1.2rem;
+  position: relative;
+}
+
+main .mobile-img {
+  width: 60%;
+  position: absolute;
+  top: -70px;
+  left: 60px;
+  z-index: 2;
+}
+
+main .img-shadow {
+  position: relative;
+  width: 60%;
+  bottom: -7px;
+  left: 22%;
+}
+
+main .header-text {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.desktop-img {
+  display: none;
+}
+
+.box {
+  display: none;
+}
+
+.pattern {
+  display: none;
+}
+
+.faqs-bx {
+  padding: 2.5rem 1.5rem;
+  padding-top: 0;
+  font-size: var(--Font-size);
+}
+
+.faqs-ans {
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--Light-grayish-blue);
+}
+
+.faqs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.faqs p {
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.faqs img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.active .faqs p {
+  font-weight: var(--heavyWeight);
+}
+
+.active .faqs img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.active .ans {
+  display: block;
+  margin-top: .5rem;
+  width: 95%;
+  line-height: 1.5rem;
+  color: var(--Dark-grayish-blue);
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.faqs p:hover {
+  color: var(--Soft-red);
+}
+
+.ans {
+  display: none;
+  color: var(--Very-dark-grayish-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 10rem auto;
+    width: 50rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+  }
+  main .desktop-img {
+    display: block;
+    position: absolute;
+    width: 230%;
+    height: 80%;
+    top: 3rem;
+    left: -13rem;
+    z-index: 2;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -60px -2.3px;
+       object-position: -60px -2.3px;
+  }
+  main .pattern {
+    display: block;
+    position: absolute;
+    width: 400%;
+    height: 190%;
+    top: 0rem;
+    left: -13rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -417px -235px;
+       object-position: -417px -235px;
+  }
+  .box {
+    position: inherit;
+    display: block;
+    width: 120%;
+    top: 9rem;
+    left: -20rem;
+    z-index: 3;
+  }
+  .accordion-bx {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+  }
+  .accordion-bx .header-text {
+    text-align: start;
+    margin-left: 1.5rem;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .img-shadow {
+    display: none;
+  }
+  .main-img {
+    position: relative;
+  }
+}
+/*# sourceMappingURL=layout.css.map */
